@@ -21,7 +21,7 @@ client = qdrant_client.QdrantClient(url=host, api_key=key)
 # See https://huggingface.co/blog/mteb for details
 distanceType = models.Distance.COSINE  # default type is cosine
 vectors_config = models.VectorParams(size=768, distance=distanceType)
-collection_name = "hackathon_test"
+collection_name = "hackathon_test2"
 client.recreate_collection(
     collection_name=collection_name, vectors_config=vectors_config
 )
@@ -40,7 +40,7 @@ def getChunks(text):
     return chunks
 
 
-with open("myData.txt", "r") as file:
+with open("myData3.txt", "r") as file:
     raw = file.read()
     chunks = getChunks(raw)
 
